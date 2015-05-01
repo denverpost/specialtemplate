@@ -98,10 +98,14 @@ function checkHash() {
 
 function scrollDownTo(whereToScroll, scrollOffset) {
     scrollOffset = typeof scrollOffset !== 'undefined' ? scrollOffset : 60;
-    $('html,body').animate({
-        scrollTop: ($(whereToScroll).offset().top - scrollOffset)
-    }, 300);
-    return false;
+    if ($(whereToScroll).length) {
+        $('html,body').animate({
+            scrollTop: ($(whereToScroll).offset().top - scrollOffset)
+        }, 300);
+    } else {
+        var new_url = window.location.href.split('#')[0];
+        window.history.replaceState('', document.title, new_url);
+    }
 }
 
 function toggleSidebar(toShow,toHide) {
