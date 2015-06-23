@@ -25,7 +25,7 @@ function revealSocial(type,link,title,image,desc,twvia,twrel) {
     //type can be twitter, facebook or gplus
     var srcurl = '';
     if (type == 'twitter') {
-        srcurl = 'http://twitter.com/intent/tweet?text=' + title + '&url=' + link + '&via=' + twvia + '&related=' + twrel;
+        srcurl = 'http://twitter.com/intent/tweet?text=' + encodeURIComponent(title).replace('|','%7c') + '&url=' + link + '&via=' + twvia + '&related=' + twrel;
     } else if (type == 'facebook') {
         srcurl = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' + link + '&p[images][0]=' + image + '&p[title]=' + encodeURIComponent(title).replace('|','%7c') + '&p[summary]=' + encodeURIComponent(desc).replace('|','%7c');
     } else if (type == 'gplus') {
