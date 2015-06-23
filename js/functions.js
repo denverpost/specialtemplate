@@ -27,7 +27,7 @@ function revealSocial(type,link,title,image,desc,twvia,twrel) {
     if (type == 'twitter') {
         srcurl = 'http://twitter.com/share?text=' + title + '&url=' + link + '&via=' + twvia + '&related=' + twrel;
     } else if (type == 'facebook') {
-        srcurl = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' + link + '&p[images][0]=' + image + '&p[title]=' + encodeURIComponent(title) + '&p[summary]=' + encodeURIComponent(desc);
+        srcurl = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=' + link + '&p[images][0]=' + image + '&p[title]=' + encodeURIComponent(title).replace('|','%7c') + '&p[summary]=' + encodeURIComponent(desc).replace('|','%7c');
     } else if (type == 'gplus') {
         srcurl = 'https://plus.google.com/share?url=' + link;
     }
