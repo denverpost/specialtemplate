@@ -584,11 +584,26 @@ a:hover, * a:hover, a:hover * {
     padding:0;
     margin:2em 0 4em;
 }
+p.credit {
+    text-transform:uppercase;
+    font-family:'Maven Pro', Helvetica, Arial, sans-serif !important;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:.65em;
+    letter-spacing:2px;
+    font-style:normal;
+    color:rgba(0,0,0,0.85);
+    width:100%;
+    text-align:right;
+    margin:0 0 2em;
+    position:relative;
+    top:-10px;
+}
 .caption {
-  	font-size:.95em;
+    font-size:.95em;
     line-height:1.5;
     color:rgba(0,0,0,0.6);
-    padding:.75em 0 0;
+    padding:.25em 1em 1em;
     margin:0;
     font-family:'PT Sans', Helvetica, Arial, sans-serif;
     font-weight:400;
@@ -605,6 +620,20 @@ a:hover, * a:hover, a:hover * {
 .caption span.capwarning {
     color:rgba(0,0,0,0.5);
     font-weight:700;
+}
+.caption span.photog {
+  text-transform:uppercase;
+  font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
+  font-weight:400;
+  text-transform:uppercase;
+  font-size:.65em;
+  letter-spacing:2px;
+  font-style:normal;
+  color:rgba(34,34,34,1.0);
+  display:block;
+  width:100%;
+  text-align:right;
+  padding-bottom:.5em;
 }
 .centergallery {
     width:100%;
@@ -637,23 +666,31 @@ a:hover, * a:hover, a:hover * {
     outline:none;
 }
 .centergallery button.slick-next {
-    position:absolute;
+    position:absolute;    
+    background:rgba(255,255,255,1.0);
+    background-image:url('../img/nextButton.svg');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:30%;
     top:0;
     right:0;
     height:100%;
     width:15%;
     text-align:left;
-    background:rgba(255,255,255,1.0);
     outline:none;
 }
 .centergallery button.slick-prev {
     position:absolute;
+    background:rgba(255,255,255,1.0);
+    background-image:url('../img/previousButton.svg');
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:30%;
     top:0;
     left:0;
     height:100%;
     width:15%;
     text-align:right;
-    background:rgba(255,255,255,1.0);
     outline:none;
 }
 /* video */

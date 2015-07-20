@@ -243,16 +243,6 @@ Example HTML:
 
 See it in operation on the project [Breakdown: Mental health in Colorado](http://dpo.st/breakdown)
 
-#### Page views
-
-You can create "pages" within the page by breaking each major section up. Wrap each "page" with an HTML `section` tag with a unique ID and an (optional) title.
-
-```
-<section id="mypage" class="omnitrig" data-omni-title="Title for Photo Gallery">
-	<!-- your content -->
-</section>
-```
-
 ##### Notes
 
 * The class `omnitrig` triggers a new pageview to be generated in Omniture when this section is scrolled into the viewport the first time. It is totally optional; omitting it will cause the URL in the address bar to change )and the page title if `data-omni-title` is set).
@@ -348,8 +338,27 @@ When basing a projct on this template, you'll need to go through and set up the 
 * Open JS console and look for errors
 * Update Credits!
 
+#### Critical changes made easy
+
+Do a find/replace for these particular items to replace the most crucial elements quickly:
+
+* {{Special Project Template title}} -- the title for `<title>` tag, meta and OG tags, etc.
+* {{Special Project Template description}} -- the description for meta and OG tags, etc.
+* {{Special Project Template keywords}} -- the description for meta and OG tags, etc.
+* {{project-directory}} -- the name of the directory the project will live in on Extras
+* {{FB-image-filename}} -- name of the image to use for the og:image tag and sharing options
+* {{author-twitter}} -- the reporter's twitter handle (without '@')
+* {{PROJECT-SECTION}} -- Overall project name, for Analytics tags
+* {{PROJECT-NAME}} -- Specific page name, for Analytics tags
+* {{Project Short Title}} -- the 2-3 word title used in the top-bar
+* {{Tweet Text}} -- pre-filled text for Twitter sharing
+
 ### Codebase resources
 * [ZURB Foundation](http://foundation.zurb.com)
 # [unveil.js](https://github.com/schneidan/unveil) (a slightly-tweaked fork)
 * [slick - the last carousel you'll ever need](http://kenwheeler.github.io/slick/)
 * [Mozilla Developer Network for CSS3, JS, HTML5 stuffs](https://developer.mozilla.org/‎)
+
+### Testing note
+
+If you are using Windows and do not have a web server such as WAMP, mongoose.exe is provided here. Simply run the file from the directory to start a simple web server and open the default page (index.html) in your default browser.
