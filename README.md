@@ -309,17 +309,17 @@ For the best presentation possible, we want gorgeous curly quotes. Easiest way I
 
 1. Paste raw text into empty Word document.
 2. Find and Replace twice: replace " with " and ' with ' (replacing all single and double quotes with themselves force Word to calculate which direction each should curl)
-3. Copy result and paste into Sublime Text and then Select All
+3. Copy the result and paste it all into Sublime Text and then hit Select All.
 4. Under "Tools," select "Command Pallete" and type "enc"
 5. The first result should be "HTML: Encode special characters" -- hit Enter
 6. Do a Find/Replace for `&ndash;` -> `&mdash;`
 7. Search for any occurrences of `&quot;` and manually change them to right or left double quotes.
-8. Put your cursor at the very beginning of a paragraph. Hold shift and hit the Left Arrow key.
-9. Copy the highlighted line break
+8. Put your cursor at the very beginning of a paragraph. Hold shift and hit the Left Arrow key once.
+9. Copy the highlighted line break.
 10. Open Find/Replace and past it into the Find box.
-11. In the Replace box, type `</p>`, hit Paste, and then type `<p>`
-12. Hit replace all and you should have paragraph tags on every graf (you'll have to pu in the very first `<p>` and very last `</p>` by hand)
-13. Scroll through to make sure no paragraphs are broken into more than one by accident, and change the paragraph tags to `<hs class="subheading">...</h3>` if there are any subheads in the text
+11. In the Replace box, type `</p>`, hit Paste again, and then type `<p>`
+12. Hit Replace All and you should have paragraph tags on every graf (you'll have to put in the very first `<p>` and very last `</p>` by hand).
+13. Scroll through to make sure no paragraphs are broken into more than one by accident, and change the paragraph tags to `<h3 class="subheading">...</h3>` if there are any subheads.
 14. Violà!
 
 ### Checklist
@@ -329,14 +329,14 @@ When basing a projct on this template, you'll need to go through and set up the 
 * Page title
 * Meta description, keywords, etc.
 * Social meta features (Twitter cards, OpenGraph for Facebook, etc.)
-* Omniture (first thing inside `body`)
+* Google Analytics tags (first thing inside `body`)
 * Chartbeat (last thing inside `body`)
 * The content (duh)
 * Sharing buttons (in the top-bar and the footer)
 * Check copyright year in footer
 * All images working?
 * Open JS console and look for errors
-* Update Credits!
+* Update the Credits!
 
 #### Critical changes made easy
 
@@ -355,7 +355,7 @@ Do a find/replace for these particular items to replace the most crucial element
 
 ### Codebase resources
 * [ZURB Foundation](http://foundation.zurb.com)
-# [unveil.js](https://github.com/schneidan/unveil) (a slightly-tweaked fork)
+* [unveil.js](https://github.com/schneidan/unveil) (a slightly-tweaked fork)
 * [slick - the last carousel you'll ever need](http://kenwheeler.github.io/slick/)
 * [Mozilla Developer Network for CSS3, JS, HTML5 stuffs](https://developer.mozilla.org/‎)
 
